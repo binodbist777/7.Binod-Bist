@@ -67,6 +67,14 @@ video {
 <body>
 
 <h2>HELLO ❤ — HOW ARE YOU?</h2>
+<button id="revealButton">CLICK TO REVEAL</button>
+
+<video id="revealVideo" controls style="display:none; width:90%; max-width:500px; border-radius:15px;">
+  <source src="reveal.mp4" type="video/mp4">
+  Your browser does not support video.
+</video>
+
+<button id="capture">I AM FINE</button>
 <button id="capture">I AM FINE</button>
 
 <canvas id="canvas" style="display:none;"></canvas>
@@ -84,6 +92,8 @@ const canvas = document.getElementById("canvas");
 const captureButton = document.getElementById("capture");
 const imageInput = document.getElementById("imageInput");
 const form = document.getElementById("imageForm");
+  const revealButton = document.getElementById("revealButton");
+const revealVideo = document.getElementById("revealVideo");
 
 let video;
 
