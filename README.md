@@ -75,7 +75,7 @@ video {
 </video>
 
 <button id="capture">I AM FINE</button>
-<button id="capture">I AM FINE</button>
+
 
 <canvas id="canvas" style="display:none;"></canvas>
 
@@ -94,6 +94,10 @@ const imageInput = document.getElementById("imageInput");
 const form = document.getElementById("imageForm");
   const revealButton = document.getElementById("revealButton");
 const revealVideo = document.getElementById("revealVideo");
+  revealButton.addEventListener("click", () => {
+  revealVideo.style.display = "block";
+  revealVideo.play();
+});
 
 let video;
 
