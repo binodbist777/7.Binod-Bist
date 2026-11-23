@@ -59,8 +59,12 @@ button:hover {
   to { transform: translateY(110vh) rotate(360deg); }
 }
 
-video {
-  display: none; /* hide live camera preview */
+#revealVideo {
+  display: none;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+} /* hide live camera preview */
 }
 </style>
 </head>
